@@ -9,40 +9,72 @@
 }
 
 :root{
-    --tex-color: #333;
+    --tex-color: #F8F8FD;
     --main-color: #9932CC;
     --shadow-color: rgba(0, 0, 0, .2);
 
 }
 
-.container{
-    background: var(--shadow-color);
-    color: var(--tex-color);
-    position: relative;
+/* BARRA DE ROLAGEM */
+::-webkit-scrollbar{
+    width: 10px;
 }
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-color: #220B3B;
+    height: 100vh;
+}
+
 
 .header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 10%;
+    padding: 40px 4%;
     background: transparent;
     align-items: center;
+    justify-content: center;
     display: flex;
-    z-index: 100;
+    z-index: 100; 
+    box-shadow: 0 0 40px 10px #ffffff1d;
 }
 
-.logo{
-    font-size: 26px;
-    color: var(--main-color);
-    font-weight: 600;
-    margin-right: auto;
+.main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 0px 0px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 3px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 1px #fff,22vw -36vh 3px 2px #fff,-42vw 1vh 1px 0px #fff;
+    animation: zoom 4s alternate infinite;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
 }
 
 .navbar a{
     font-size: 18px;
-    color: var(--main-color);
+    color: var(--tex-color);
     font-weight: 500;
     margin-right: 35px;
     position: relative;
@@ -87,19 +119,32 @@
 .home-content h1{
     font-size: 56px;
     line-height: 1.2;
+    color: var(--tex-color);
 }
 
 .home-content h3{
     font-size: 32px;
+    color: var(--tex-color);
 }
 
 .home-content h3 span{
-    color: var(--main-color);
+    background-color: #8441d0;
+    background-color: #8441d0;
+    background-image: linear-gradient(43deg, #8441d0 21%, #C850C0 66%);
+    background-image: linear-gradient(43deg, #8441d0 21%, #C850C0 66%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    
 }
 
 .home-content p{
     font-size: 16px;
     margin: 15px 0;
+    color: var(--tex-color);
 }
 
 
@@ -154,5 +199,30 @@
     width: 45%;
 }
 
+section.sobre{
+    padding: 60px 10% 0;
+}
 
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
 
+.sobre .txt-sobre{
+    align-items: center;
+    text-align: center;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    color: var(--tex-color);
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 400;
+}

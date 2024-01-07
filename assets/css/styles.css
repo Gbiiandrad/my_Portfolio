@@ -273,16 +273,29 @@ section.sobre .flex{
 }
 
 .sobre .txt-sobre p{
-    margin: 20px 0;
     text-align: justify;
-    font-size: 20px;
-    font-weight: 400;
+    
+
 }
 
-.text-box p{
-    font-size: 1.1rem;
-    font-weight: 500;
+.text-box p.titulo{
+    font-size: 25px;
+    font-weight: 700;
 }
+
+.text-box p.sub-titulo{
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+.text-box p.descricao{
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+
 
 .sobre-btn{
     margin: 0.8rem 0;
@@ -313,5 +326,6 @@ section.sobre .flex{
 .content-btn > .content:not(:first-child){
     display: none;
 }
+
 
 /*parte Projetos*/

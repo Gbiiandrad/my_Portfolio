@@ -6,14 +6,17 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root{
     --tex-color: #F8F8FD;
     --main-color: #9932CC;
     --shadow-color: rgba(0, 0, 0, .2);
+    --hover-box-shadow: rgba(0,0,0,0.19)0px 10px 20px, rgba(0,0,0,0.23)0px 6px 6px;
 
 }
+
 
 /* BARRA DE ROLAGEM */
 ::-webkit-scrollbar{
@@ -26,41 +29,40 @@
     
   }
 
-html{
-    scroll-behavior: smooth;
-}
-
 
 body{
     background-color: #220B3B;
     height: 100vh;
 }
 
+/*Animaçao de fundo*/
+.main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    width: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 0px 0px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 3px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 1px #fff,22vw -36vh 3px 2px #fff,-42vw 1vh 1px 0px #fff;
+    animation: zoom 3s alternate infinite;
+}
+
+/*CAbeçalho*/
 
 .header{
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 40px 4%;
-    background: transparent;
     align-items: center;
-    justify-content: center;
-    display: flex;
+    justify-content: center; 
+
+    background: transparent;
     z-index: 100; 
     box-shadow: 0 0 40px 10px #ffffff1d;
-}
-
-.main{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    height: 1px;
-    width: 1px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 0px 0px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 3px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 1px #fff,22vw -36vh 3px 2px #fff,-42vw 1vh 1px 0px #fff;
-    animation: zoom 4s alternate infinite;
 }
 
 @keyframes zoom {
@@ -98,13 +100,8 @@ body{
     opacity: 0.8;
 }
 
-.toggle-icon{
-    display: flex;
-    font-size: 24px;
-    cursor: pointer;
-}
 
-
+/*Pagina 1*/
 .home{
     height: 100vh;
     display: flex;
@@ -122,14 +119,17 @@ body{
     color: var(--tex-color);
 }
 
+
 .home-content h3{
     font-size: 32px;
     color: var(--tex-color);
 }
 
-.home-content h3 span{
-    background-color: #8441d0;
-    background-color: #8441d0;
+/*Animaçao do "Desenvolvedor web"*/
+.home-content .tex-animate h3 span{
+    position: relative;
+    font-size: 40px;
+
     background-image: linear-gradient(43deg, #8441d0 21%, #C850C0 66%);
     background-image: linear-gradient(43deg, #8441d0 21%, #C850C0 66%);
 
@@ -138,8 +138,50 @@ body{
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color:transparent;
+}
+
+.home-content .tex-animate h3 span::before{
+    content: "";
+    color: #220B3B;
+    animation: palavras 20s infinite;
+
+}
+
+.home-content .tex-animate h3 span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #220B3B;
+    right: -10px;
+    animation: cursor .8s infinite, digita 20s steps(15) infinite;
+    width: calc(100% + 10px);
+    background-color: #220B3B ;
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 10px);
+    } 
+}
+
+@keyframes cursor {
+    0%{
+        border-left: 2px solid #8441d0;
+    }
+}
+
+
+@keyframes palavras {
+    0%,100%{
+        content: "Web Develope.";
+    }
     
 }
+
 
 .home-content p{
     font-size: 16px;
@@ -187,6 +229,11 @@ body{
     transition: 0.5s;
 }
 
+.btn-cv i{
+    
+    font-size: 20px;
+}
+
 .btn-cv:hover{
     background: transparent;
     color: var(--main-color);
@@ -199,11 +246,13 @@ body{
     width: 45%;
 }
 
+/*Parte Sobre mim*/
 section.sobre{
     padding: 60px 10% 0;
 }
 
 section.sobre .flex{
+    display: flex;
     align-items: center;
     gap: 60px;
 }
@@ -211,6 +260,9 @@ section.sobre .flex{
 .sobre .txt-sobre{
     align-items: center;
     text-align: center;
+    flex-direction: column;
+    
+    
 }
 
 .sobre .txt-sobre h2{
@@ -226,3 +278,40 @@ section.sobre .flex{
     font-size: 20px;
     font-weight: 400;
 }
+
+.text-box p{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.sobre-btn{
+    margin: 0.8rem 0;
+}
+
+.sobre-btn button{
+    color: var(--tex-color);
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+    margin: .5rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.sobre-btn button.active{
+    background: var(--main-color);
+}
+
+.text-box{
+    margin: .8rem 0;
+}
+
+.content-btn > .content:not(:first-child){
+    display: none;
+}
+
+/*parte Projetos*/

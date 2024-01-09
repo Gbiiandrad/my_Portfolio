@@ -274,7 +274,9 @@ section{
 section.sobre{
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
-.titulo-sobreMim{
+
+
+.titulo-sobreMim, .titulo-skills{
     font-size: 30px;
     display: flex;
     justify-content: center;
@@ -302,7 +304,7 @@ section.sobre{
     padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid var(--main-color);
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 500;
     box-shadow: 0 0 40px 10px #ffffff1d;
     margin: .5rem;
@@ -323,10 +325,16 @@ section.sobre{
 }
 
 
-.text-box p.titulo{
-    font-size: 25px;
-    font-weight: 700;
+
+.content-btn .content{
+    margin-top: 20px;
+    padding: 20px;
+    background: #00000015;
+    border: 2px solid #ffffff30;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
 }
+
 
 .text-box .descricao-sobre{
     font-size: 18px;
@@ -334,17 +342,7 @@ section.sobre{
     margin-top: 18px;
 }
 
-.text-box p.sub-titulo{
-    font-size: 20px;
-    font-weight: 500;
-    
-}
 
-.text-box p.descricao{
-    font-size: 1rem;
-    font-weight: 400;
-    opacity: 0.8;
-}
 
 .info-sobre{
     display: flex;
@@ -365,16 +363,25 @@ section.sobre{
 .data-sobre{
     color: var(--main-color);
     font-size: 16px;
+
+
 }
 
-.titulo-educacao{
+.titulo-educacao,  .text-box p.titulo{
     font-size: 35px;
     font-weight: 700;
+    
 }
 
 .sub-titulo-escola{
     font-size: 18px;
     font-weight: 700;
+    background: radial-gradient(circle, rgba(238,174,202,1) 6%, rgba(148,187,233,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /*Defina a cor do texto para transparente*/
+    color: transparent;
+    
 }
 
 .descricao-educacao{
@@ -386,9 +393,9 @@ section.sobre{
 
 
 .habilidade-educacao{
-    display: flex;
-    gap: 60px;
-    font-size: 14px;
+    display: inline-flex;
+    gap: 15px;
+    font-size: 13px;
     align-items: center;
     color: var(--tex-color);
     font-weight: 500;
@@ -401,14 +408,68 @@ section.sobre{
     border: 1px solid var(--main-color);
 }
 
-br {
-    height: 1000px;
-    width: 1000px;
-    background-color: red;
-    border: 1px solid black;
+hr {
+    margin: 30px 0;
+    height: 2px;
+    width: auto;
+    background: radial-gradient(circle, rgba(238,174,202,1) 6%, rgba(148,187,233,1) 100%);
+    border: none;
     display: block;
-    line-height: 300%;
   }
+
+
+.text-box p.sub-titulo{
+    font-size: 20px;
+    font-weight: 700;  
+    background: radial-gradient(circle, rgba(238,174,202,1) 6%, rgba(148,187,233,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /*Defina a cor do texto para transparente*/
+    color: transparent;
+    
+}
+
+.text-box p.descricao{
+    margin: 13px 0 ;
+    font-size: 18px;
+    font-weight: 400;
+
+    
+}
+
+.text-box p.descricao span{
+    font-weight:bold;
+    color: var(--main-color);
+}
+
+/*projetos*/
+
+.projetos-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.projetos-container .projetos-box{
+    position: relative;
+    border-radius: 2rem;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+}
+
+.projetos-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5 ease;
+}
+
+
+
+
+
 
 
 

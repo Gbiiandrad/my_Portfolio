@@ -7,7 +7,7 @@
     <!--Box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--CSS-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Portfolio</title>
 </head>
 
@@ -15,10 +15,10 @@
     <header class="header">
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
-            <a href="#">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Projetos</a>
-            <a href="#">Contato</a>
+            <a href="#home">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="./projetos.html">Projetos</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
 
@@ -50,7 +50,7 @@
             </div>
         </section>
 
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="titulo-sobreMim">
                 <h2>Sobre mim</h2>
             </div>
@@ -200,33 +200,70 @@
 
         <section class="Projetos" id="Projetos">
             <div class="titulo-skills">
-                <h2>Projetos</h2>             
+                <h2>Projetos</h2>
             </div>
             <div class="projetos-container">
                 <div class="projetos-box">
                     <img src="./assets/img/imgProjetoTeste.jpg" alt="">
                     <div class="projetos-info">
                         <h4>Nome projeto</h4>
-                        <a href="#"><i class="bx bx-link"></i></a>
+                        <div class="links-projeto">
+                            <a href="#"><i class='bx bxl-github'></i></a>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="projetos-box">
                     <img src="./assets/img/imgProjetoTeste.jpg" alt="">
                     <div class="projetos-info">
                         <h4>Nome projeto</h4>
-                        <a href="#"><i class="bx bx-link"></i></a>
+                        <div class="links-projeto">
+                            <a href="#"><i class='bx bxl-github'></i></a>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="projetos-box">
                     <img src="./assets/img/imgProjetoTeste.jpg" alt="">
                     <div class="projetos-info">
                         <h4>Nome projeto</h4>
-                        <a href="#"><i class="bx bx-link"></i></a>
+                        <div class="links-projeto">
+                            <a href="#"><i class='bx bxl-github'></i></a>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+            <div class="botao-veja">
+                <a href="./projetos.html">
+                    <button onclick="" id="vejaMais-button">Ver todos</button>
+                </a>
             </div>
         </section>
     </main>
+    <footer class="footer" id="contato">
+        <div class="social-footer">
+            <a href="https://github.com/Gbiiandrad" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/gabrielle-andrade-dev/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="mailto:gabii12303.net@gmail.com"><i class='bx bx-envelope'></i></a>
+        </div>
+
+        <div class="list">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="./projetos.html">Projetos</a></li>
+                <li><a href="#contato">Contato</a</li>
+
+            </ul>
+        </div>
+
+        <div class="copyright">
+            © Gabrielle Andrade 2024 | Todos os direitos reservados
+        </div>
+    </footer>
+
 
     <script src="script.js"></script>
 </body>

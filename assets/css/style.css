@@ -39,6 +39,15 @@ html{
     overflow-x: hidden ;
 }
 
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
 /*Animaçao de fundo*/
 .animate-fundo{
     position: fixed;
@@ -115,15 +124,16 @@ html{
 
 /*pagina parte 1*/
 
-section{
-    min-height: 100vh;
-    padding: 10rem 9% 10rem;
-    
+section.topo-do-site{
+    margin-top: 100px;
+    padding: 80px 4%;
 }
 
-.home{
-    display: flex;
-    align-items: center;   
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /* para distanciar o lado esquerdo da imagem, assim ele se agrupo om as modificações */
+    
 }
 
 
@@ -134,8 +144,8 @@ section{
 
 
 .home-content-esquerda h1{
-    font-size: 8rem;
-    line-height: 1.2;
+    font-size: 42px;
+    line-height: 40px;
     color: var(--tex-color);
 }
 
@@ -195,18 +205,33 @@ section{
     }
     
 }
-.home-img img{ 
-    position: absolute;
-    bottom: 0;
-    right: 30px;
-    width: 45%;
+
+.topo-do-site .img-topo-site img{
+    width: 100%;
+}
+
+
+.topo-do-site .img-topo-site img{
+    position: relative; /* para aplicar o Keyframes precisa estar no position relative */
+    animation: flutuar 2s ease-in-out infinite alternate;
+/* Propriedae / nome dado a animação / tempo da conclução da animação / Velocidade, começar suaver e terminar suave / ficar em loop / alternando para 0 1 2 3... 100 99 98... */
+}
+
+/* Animação para a imagem */
+@keyframes flutuar {
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 30px;
+    }
 }
 
 
 .home-content-esquerda p{
     font-size: 1.8rem;
     font-weight: 500;
-    width: 70%;
 }
 
 
@@ -267,22 +292,23 @@ section{
 }
 
 
-.home-content-direita img{
-    position: absolute;
-    bottom: 0;
-    right: 30px;
-    width: 45%;
 
-}
 
 /*sobre mim*/
 
 section.sobre{
     box-shadow: 0 0 40px 10px #ffffff1d;
+    padding: 80px 4%;
+    margin-top: 200px;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
 }
 
 
-.titulo-sobreMim, .titulo-skills{
+.titulo-sobreMim{
     font-size: 30px;
     display: flex;
     justify-content: center;
@@ -296,14 +322,6 @@ section.sobre{
 
 
 /*botoes sobre*/
-.sobre-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
 .sobre-btn button{
     color: var(--tex-color);
     background: transparent;
@@ -450,6 +468,11 @@ hr {
 
 /*projetos*/
 
+section.Projetos{
+    padding: 0px 4% 80px;
+    margin-top: 100px;
+}
+
 .projetos-container{
     margin-top: 30px;
     display: grid;
@@ -468,6 +491,11 @@ hr {
 
     
     
+}
+ .titulo-skills{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .projetos-box img{
@@ -619,10 +647,38 @@ hr {
     color: var(--tex-color);
 }
 
+
+
+
 @media screen and (max-width: 1020px) {
 
     html{
         font-size: 55%;
+    }
+
+    .flex{
+        flex-direction: column; /* colocar tudo um de baixo  do outro */
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse; /* para reverter so o texto e a imagem em movimento */
+    }
+
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 80%;
+    }
+
+
+    section.sobre{
+        width: auto;
     }
 
     .sobre .flex{
@@ -632,11 +688,21 @@ hr {
         margin: 0;
     }
 
-    .flex .sobre-esquerda img{
-        display: none;
+    .img-sobre img{
+        width: 80%;
     }
-    .header{
-        display: none;
+
+
+    .txt-topo-site{
+        margin-top: 20px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .habilidade-educacao{
+        flex-direction: column;
+        
     }
 
     .projetos-container{
@@ -644,10 +710,106 @@ hr {
         grid-template-columns: repeat(1,1fr);
         margin: 4rem 5rem;
     }
+
+     /* RODAPÉ */
+    footer .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
 }
 
 
+@media screen and (max-width: 995px){
+        /*icone de menu*/
+    #menu-icon{
+        display: block;
+    }
 
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid var(--main-color);
+        border-bottom: 3px solid var(--main-color);
+        border-bottom-left-radius: 2em;
+        padding: 1rem 3%;
+        background: #F8F8FD;
+        border-top: 0.1rem solid green;
+        display: none;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home-content-esquerda h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content-esquerda h1{
+        font-size: 5rem;
+    }
+
+    .home-content-direita img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .home-content-esquerda p{
+        margin-top: 20px;
+    }
+    
+    .home-content-esquerda h1{
+        font-size: 35px;
+    }
+    
+    /*Animaçao do "Desenvolvedor web"*/
+    .home-content-esquerda .tex-animate h3 span{
+        font-size: 2.7rem;
+    }
+
+
+
+
+
+
+
+    .habilidade-educacao{
+        flex-direction: column;
+        
+    }
+
+         /* RODAPÉ */
+    footer .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer ul{
+        display: none;
+    }
+
+    
+    .footer .copyright{
+        margin-top: 10px;
+
+    }
+
+
+
+    
+    
+}
 
 
 

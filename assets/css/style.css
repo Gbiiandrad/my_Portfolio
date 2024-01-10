@@ -619,6 +619,34 @@ hr {
     color: var(--tex-color);
 }
 
+@media screen and (max-width: 1020px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    .sobre .flex{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .flex .sobre-esquerda img{
+        display: none;
+    }
+    .header{
+        display: none;
+    }
+
+    .projetos-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1,1fr);
+        margin: 4rem 5rem;
+    }
+}
+
+
 
 
 

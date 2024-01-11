@@ -126,6 +126,18 @@ section{
     justify-content: center;
 }
 
+.descricaoTitulo{
+    padding: 15px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.descricaoTitulo p{
+    width: 50%;
+    text-align: center;
+}
+
 
 .projetos-container{
     margin-top: 30px;
@@ -286,6 +298,97 @@ section{
 
 .footer .social-footer a:active{
     opacity: 0.8;
+}
+
+
+
+@media screen and (max-width: 1020px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .flex {
+        flex-direction: column;
+        /* colocar tudo um de baixo  do outro */
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+        /* para reverter so o texto e a imagem em movimento */
+    }
+
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 80%;
+    }
+
+    .projetos-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 4rem 5rem;
+    }
+
+    /* RODAPÉ */
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+}
+
+/*Efeito do Scroll*/
+.rolagem-projeto1,.rolagem-projeto2,.rolagem-projeto3,
+.rolagem-projeto4{
+    visibility: hidden; /*esconder o conteudo antes do efeito*/
+}
+
+
+
+
+
+@media screen and (max-width: 610px) {
+
+
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer ul {
+        display: none;
+    }
+
+
+    .footer .copyright {
+        margin-top: 10px;
+
+    }
+
+
+
+
+
+}
+
+@media screen and (max-width: 391px) {
+    
+    .header {
+        display: block;
+
+    }
+    .navbar a {
+        font-size: 1.4rem;
+    }
+
 }
 
 

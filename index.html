@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--scrollreveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="reveal.js" defer></script>
+
+
     <!--Box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--CSS-->
@@ -13,12 +19,12 @@
 
 <body>
     <header class="header">
-        <i class='bx bx-menu' id="menu-icon"></i>
+        <!--<i class='bx bx-menu' id="menu-icon"></i>-->
         <nav class="navbar">
-            <a href="#home">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="./projetos.html">Projetos</a>
-            <a href="#contato">Contato</a>
+                <a href="#home" class="active">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="./projetos.html">Projetos</a>
+                <a href="#contato">Contato</a>
         </nav>
     </header>
 
@@ -28,7 +34,7 @@
         <section id="topo-do-site" class="topo-do-site">
             <div class="interface">
                 <div class="flex">
-                    <div class="txt-topo-site">
+                    <div class="txt-topo-site efeito-txt-top">
                         <div class="home-content-esquerda">
                             <h3>oi, eu sou</h3>
                             <h1>Gabrielle Andrade</h1>
@@ -49,7 +55,7 @@
                         </div>
                     </div> <!--Lado esquerdo do site-->
                     
-                    <div class="img-topo-site">
+                    <div class="img-topo-site efeito-img-topo">
                         <img src="./assets/img/img1.png" alt="">
                     </div><!--Imagem do site-->
                 
@@ -59,17 +65,17 @@
 
         <section id="sobre" class="sobre">
             <div class="interface">
-                <div class="titulo-sobreMim">
+                <div class="titulo-sobreMim efeito-txt-top">
                     <h2>Sobre mim</h2>
                 </div>
                 <div class="flex">
-                    <div class="img-sobre">
+                    <div class="img-sobre efeito-img-sobre">
                         <img src="./assets/img/imghome.png" alt="">
                     </div><!--img-sobre-->
 
                     <div class="txt-sobre">
                         <div class="btn-social">           
-                            <div class="sobre-direita">
+                            <div class="sobre-direita efeito-txt-sobre">
                                 <div class="sobre-btn">
                                     <button class="active">bio</button>
                                     <button>Educação</button>
@@ -219,7 +225,7 @@
                 <h2>Projetos</h2>
             </div>
             <div class="projetos-container">
-                <div class="projetos-box">
+                <div class="projetos-box efeito-projetos1" >
                     <img src="./assets/img/imgHalloween.png" alt="">
                     <div class="projetos-info">
                         <h4>Halloween Animado</h4>
@@ -229,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projetos-box">
+                <div class="projetos-box efeito-projetos2">
                     <img src="./assets/img/tela-login1.png" alt="">
                     <div class="projetos-info">
                         <h4>Tela De Login</h4>
@@ -239,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projetos-box">
+                <div class="projetos-box efeito-projetos3">
                     <img src="./assets/img/mario-e-luigi.png" alt="">
                     <div class="projetos-info">
                         <h4>Mario e Luigi</h4>
@@ -251,7 +257,7 @@
                 </div>
 
             </div>
-            <div class="botao-veja">
+            <div class="botao-veja efeito-btn">
                 <a href="./projetos.html">
                     <button onclick="" id="vejaMais-button">Ver todos</button>
                 </a>

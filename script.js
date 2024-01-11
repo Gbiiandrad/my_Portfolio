@@ -24,15 +24,4 @@ buttons.forEach((button , index) => {
     });
 });
 
-//botao Veja Mais
-
-var button = document.getElementById("vejaMais-button");
-
-button.addEventListener('click' , function(){
-    var projetos = document.querySelector("Projetos");
-    projetos.classList.toggle('active');
-
-    if(projetos.classList.contains('active')){
-        return button.textContent = 'Veja Menos';
-    }
-})
+  

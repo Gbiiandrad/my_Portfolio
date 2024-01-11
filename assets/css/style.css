@@ -1,55 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-  
+
 }
 
-:root{
+:root {
     --main-color: #9932CC;
-    --bg-fundo:#220B3B;
+    --bg-fundo: #220B3B;
     --tex-color: #F8F8FD;
-    --hover-box-shadow: rgba(0,0,0,0.19)0px 10px 20px, rgba(0,0,0,0.23)0px 6px 6px;
+    --hover-box-shadow: rgba(0, 0, 0, 0.19)0px 10px 20px, rgba(0, 0, 0, 0.23)0px 6px 6px;
 }
 
 /* BARRA DE ROLAGEM */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-color);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    
+    background-color: var(--main-color);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+
 }
 
-body{
+body {
     background-color: var(--bg-fundo);
     height: 100vh;
     color: var(--tex-color);
 }
 
-html{
+html {
     font-size: 62.5%;
-    overflow-x: hidden ;
+    overflow-x: hidden;
 }
 
-.interface{
+.interface {
     max-width: 1280px;
     margin: 0 auto;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
 /*Animaçao de fundo*/
-.animate-fundo{
+.animate-fundo {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -57,45 +59,48 @@ html{
     width: 2px;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 0px 0px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 3px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 1px #fff,22vw -36vh 3px 2px #fff,-42vw 1vh 1px 0px #fff;
+    box-shadow: -24vw -44vh 2px 2px #fff, 38vw -4vh 0px 0px #fff, -20vw -48vh 1px 2px #fff, -39vw 38vh 3px 1px #fff, -42vw -11vh 0px 3px #fff, 12vw 15vh 3px 3px #fff, 42vw 6vh 3px 2px #fff, -8vw 9vh 0px 2px #fff, 34vw -38vh 1px 0px #fff, -17vw 45vh 3px 1px #fff, 22vw -36vh 3px 2px #fff, -42vw 1vh 1px 0px #fff;
     animation: zoom 3s alternate infinite;
 }
 
 @keyframes zoom {
-    0%{
+    0% {
         transform: scale(1);
     }
-    100%{
+
+    100% {
         transform: scale(1.5);
     }
 }
 
 /*CAbeçalho*/
 
-.header{
+.header {
     display: flex;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     padding: 40px 4%;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 
     background: transparent;
-    z-index: 100; 
+    z-index: 100;
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
 
-.navbar a{
+
+.navbar a {
     font-size: 1.8rem;
     color: var(--tex-color);
     font-weight: 500;
     margin-left: 4rem;
-    position: relative; /*para colocar o traço animado em baixo*/
+    position: relative;
+    /*para colocar o traço animado em baixo*/
 }
 
 .navbar a::after,
-.footer ul li a::after{
+.footer ul li a::after {
     content: "";
     width: 0%;
     height: 2px;
@@ -107,50 +112,61 @@ html{
 }
 
 .navbar a:hover::after,
-.footer ul li a:hover::after{
+.footer ul li a:hover::after {
     width: 100%;
 }
+
 .navbar a:active,
-.footer ul li a:active{
+.footer ul li a:active {
     opacity: 0.8;
 }
 
+
+
 /*icone de menu*/
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--tex-color);
+
+.mobile-menu {
+    cursor: pointer;
     display: none;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--tex-color);
+    margin: 8px;
 }
 
 /*pagina parte 1*/
 
-section.topo-do-site{
+section.topo-do-site {
     margin-top: 100px;
     padding: 80px 4%;
 }
 
-section.topo-do-site .flex{
+section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
-    gap: 90px; /* para distanciar o lado esquerdo da imagem, assim ele se agrupo om as modificações */
-    
+    gap: 90px;
+    /* para distanciar o lado esquerdo da imagem, assim ele se agrupo om as modificações */
+
 }
 
 
-.home-content-esquerda h3{
+.home-content-esquerda h3 {
     font-size: 3rem;
     font-weight: 700;
 }
 
 
-.home-content-esquerda h1{
+.home-content-esquerda h1 {
     font-size: 42px;
     line-height: 40px;
     color: var(--tex-color);
 }
 
 /*Animaçao do "Desenvolvedor web"*/
-.home-content-esquerda .tex-animate h3 span{
+.home-content-esquerda .tex-animate h3 span {
     position: relative;
     font-size: 40px;
 
@@ -161,17 +177,17 @@ section.topo-do-site .flex{
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color:transparent;
+    -moz-text-fill-color: transparent;
 }
 
-.home-content-esquerda .tex-animate h3 span::before{
+.home-content-esquerda .tex-animate h3 span::before {
     content: "";
     color: #220B3B;
     animation: palavras 20s infinite;
 
 }
 
-.home-content-esquerda .tex-animate h3 span::after{
+.home-content-esquerda .tex-animate h3 span::after {
     content: "";
     position: absolute;
     height: 100%;
@@ -179,65 +195,86 @@ section.topo-do-site .flex{
     right: -10px;
     animation: cursor .8s infinite, digita 20s steps(15) infinite;
     width: calc(100% + 10px);
-    background-color: #220B3B ;
+    background-color: #220B3B;
 }
 
 @keyframes digita {
-    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
         width: 0;
     }
 
-    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
         width: calc(100% + 10px);
-    } 
+    }
 }
 
 @keyframes cursor {
-    0%{
+    0% {
         border-left: 2px solid #8441d0;
     }
 }
 
 
 @keyframes palavras {
-    0%,100%{
+
+    0%,
+    100% {
         content: "Web Develope.";
     }
-    
+
 }
 
-.topo-do-site .img-topo-site img{
+.topo-do-site .img-topo-site img {
     width: 100%;
 }
 
 
-.topo-do-site .img-topo-site img{
-    position: relative; /* para aplicar o Keyframes precisa estar no position relative */
+.topo-do-site .img-topo-site img {
+    position: relative;
+    /* para aplicar o Keyframes precisa estar no position relative */
     animation: flutuar 2s ease-in-out infinite alternate;
-/* Propriedae / nome dado a animação / tempo da conclução da animação / Velocidade, começar suaver e terminar suave / ficar em loop / alternando para 0 1 2 3... 100 99 98... */
+    /* Propriedae / nome dado a animação / tempo da conclução da animação / Velocidade, começar suaver e terminar suave / ficar em loop / alternando para 0 1 2 3... 100 99 98... */
 }
 
 /* Animação para a imagem */
 @keyframes flutuar {
-    0%{
+    0% {
         top: 0;
     }
 
-    100%{
+    100% {
         top: 30px;
     }
 }
 
 
-.home-content-esquerda p{
+.home-content-esquerda p {
     font-size: 1.8rem;
     font-weight: 500;
 }
 
 
 /*botao de rede social*/
-.social-midia a, 
-.footer .social-footer a{
+.social-midia a,
+.footer .social-footer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -253,8 +290,8 @@ section.topo-do-site .flex{
     transition: 0.3s ease;
 }
 
-.social-midia a:hover
-, .footer .social-footer a:hover{
+.social-midia a:hover,
+.footer .social-footer a:hover {
     background: var(--main-color);
     color: #F8F8FD;
     transform: scale(1) translateY(-5px);
@@ -262,11 +299,11 @@ section.topo-do-site .flex{
 }
 
 .social-midia a:active,
-.footer .social-footer a:active{
+.footer .social-footer a:active {
     opacity: 0.8;
 }
 
-.btn-cv{
+.btn-cv {
     display: inline-block;
     padding: 1.6rem 3.9rem;
     font-size: 1.2rem;
@@ -281,12 +318,12 @@ section.topo-do-site .flex{
     transition: 0.5s ease;
 }
 
-.btn-cv i{
-    
+.btn-cv i {
+
     font-size: 20px;
 }
 
-.btn-cv:hover{
+.btn-cv:hover {
     background: transparent;
     color: var(--main-color);
 }
@@ -296,25 +333,26 @@ section.topo-do-site .flex{
 
 /*sobre mim*/
 
-section.sobre{
+section.sobre {
+    width: 100vw;
     box-shadow: 0 0 40px 10px #ffffff1d;
     padding: 80px 4%;
     margin-top: 200px;
 }
 
-section.sobre .flex{
+section.sobre .flex {
     align-items: center;
     gap: 60px;
 }
 
 
-.titulo-sobreMim{
+.titulo-sobreMim {
     font-size: 30px;
     display: flex;
     justify-content: center;
 }
 
-.sobre .flex{
+.sobre .flex {
     margin-top: 50px;
     display: flex;
     gap: 60px;
@@ -322,7 +360,7 @@ section.sobre .flex{
 
 
 /*botoes sobre*/
-.sobre-btn button{
+.sobre-btn button {
     color: var(--tex-color);
     background: transparent;
     padding: 10px 20px;
@@ -336,21 +374,21 @@ section.sobre .flex{
     transition: all .3s ease;
 }
 
-.sobre-btn button.active{
+.sobre-btn button.active {
     background: var(--main-color);
 }
 
-.text-box{
+.text-box {
     margin: .8rem 0;
 }
 
-.content-btn > .content:not(:first-child){
+.content-btn>.content:not(:first-child) {
     display: none;
 }
 
 
 
-.content-btn .content{
+.content-btn .content {
     margin-top: 20px;
     padding: 20px;
     background: #00000015;
@@ -360,7 +398,7 @@ section.sobre .flex{
 }
 
 
-.text-box .descricao-sobre{
+.text-box .descricao-sobre {
     font-size: 18px;
     font-weight: 500;
     margin-top: 18px;
@@ -368,7 +406,7 @@ section.sobre .flex{
 
 
 
-.info-sobre{
+.info-sobre {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -380,52 +418,54 @@ section.sobre .flex{
 }
 
 
-.info-sobre span{
+.info-sobre span {
     color: var(--tex-color);
 }
 
-.data-sobre{
+.data-sobre {
     color: var(--main-color);
     font-size: 16px;
 
 
 }
 
-.titulo-educacao,  .text-box p.titulo{
+.titulo-educacao,
+.text-box p.titulo {
     font-size: 35px;
     font-weight: 700;
-    
+
 }
 
-.sub-titulo-escola{
+.sub-titulo-escola {
     font-size: 18px;
     font-weight: 700;
-    background: radial-gradient(circle, rgba(238,174,202,1) 6%, rgba(148,187,233,1) 100%);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 6%, rgba(148, 187, 233, 1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     /*Defina a cor do texto para transparente*/
     color: transparent;
-    
+
 }
 
-.descricao-educacao{
-    margin: 15px 0 ;
+.descricao-educacao {
+    margin: 15px 0;
     font-size: 15px;
     font-weight: 400;
     opacity: 0.8;
 }
 
 
-.habilidade-educacao{
+.habilidade-educacao {
     display: inline-flex;
     gap: 15px;
     font-size: 13px;
     align-items: center;
     color: var(--tex-color);
     font-weight: 500;
-    
+
 }
-.habilidade-educacao p{
+
+.habilidade-educacao p {
     background: transparent;
     padding: 10px 20px;
     border-radius: 5px;
@@ -436,83 +476,84 @@ hr {
     margin: 30px 0;
     height: 2px;
     width: auto;
-    background: radial-gradient(circle, rgba(238,174,202,1) 6%, rgba(148,187,233,1) 100%);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 6%, rgba(148, 187, 233, 1) 100%);
     border: none;
     display: block;
-  }
+}
 
 
-.text-box p.sub-titulo{
+.text-box p.sub-titulo {
     font-size: 20px;
-    font-weight: 700;  
-    background: radial-gradient(circle, rgba(238,174,202,1) 6%, rgba(148,187,233,1) 100%);
+    font-weight: 700;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 6%, rgba(148, 187, 233, 1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     /*Defina a cor do texto para transparente*/
     color: transparent;
-    
+
 }
 
-.text-box p.descricao{
-    margin: 13px 0 ;
+.text-box p.descricao {
+    margin: 13px 0;
     font-size: 18px;
     font-weight: 400;
 
-    
+
 }
 
-.text-box p.descricao span{
-    font-weight:bold;
+.text-box p.descricao span {
+    font-weight: bold;
     color: var(--main-color);
 }
 
 /*projetos*/
 
-section.Projetos{
+section.Projetos {
     padding: 0px 4% 80px;
     margin-top: 100px;
 }
 
-.projetos-container{
+.projetos-container {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
-    
+
 }
 
-.projetos-container .projetos-box{
+.projetos-container .projetos-box {
     position: relative;
     border-radius: 2rem;
     height: 500px;
     overflow: hidden;
     display: flex;
 
-    
-    
+
+
 }
- .titulo-skills{
+
+.titulo-skills {
     font-size: 30px;
     display: flex;
     justify-content: center;
 }
 
-.projetos-box img{
+.projetos-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 0.5 ease;
     filter: grayscale(0.5) blur(2px);
-    
-    
+
+
 }
 
-.projetos-box:hover img{
+.projetos-box:hover img {
     transform: scale(1.1);
 }
 
-.projetos-box .projetos-info{
+.projetos-box .projetos-info {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -526,15 +567,15 @@ section.Projetos{
     padding: 0 4rem;
     cursor: pointer;
     transition: 0.5s ease;
-    
+
 }
 
-.projetos-box .projetos-info:hover{
-    background: rgba(0, 0, 0, 0.75); 
+.projetos-box .projetos-info:hover {
+    background: rgba(0, 0, 0, 0.75);
     transform: scale(1.1);
 }
 
-.projetos-info h4{
+.projetos-info h4 {
     font-size: 3rem;
     color: var(--tex-color);
     font-weight: 800;
@@ -542,14 +583,14 @@ section.Projetos{
 
 
 
-.links-projeto{
+.links-projeto {
     margin-top: 10px;
     display: flex;
     gap: 15px;
 
 }
 
-.projetos-info a{
+.projetos-info a {
     color: var(--tex-color);
     display: inline-flex;
     justify-content: center;
@@ -559,23 +600,23 @@ section.Projetos{
     background: var(--main-color);
     border-radius: 50%;
 
-    
+
 }
 
-.projetos-info a i{
+.projetos-info a i {
     font-size: 3rem;
     color: var(--tex-color);
 }
 
-.botao-veja{
+.botao-veja {
     margin: 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#vejaMais-button{
-    
+#vejaMais-button {
+
     padding: 15px 45px;
     font-size: 20px;
     border: none;
@@ -587,23 +628,20 @@ section.Projetos{
     cursor: pointer;
 }
 
-#vejaMais-button:hover{
+#vejaMais-button:hover {
     background: var(--main-color);
     color: #F8F8FD;
     transform: scale(1) translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
 }
 
-#vejaMais-button:active{
+#vejaMais-button:active {
     opacity: 0.8;
 }
 
-.projeto.active .projetos-container{
-    width: auto;
-}
 
 /*Footer*/
-.footer{
+.footer {
     background: #9932cc25;
     position: relative;
     bottom: 0;
@@ -613,11 +651,11 @@ section.Projetos{
     padding: 20px;
 }
 
-.footer .social-footer{
+.footer .social-footer {
     text-align: center;
 }
 
-.footer ul{
+.footer ul {
     margin-top: 0;
     padding: 0;
     font-size: 1.8rem;
@@ -627,20 +665,21 @@ section.Projetos{
     text-decoration: none;
 }
 
-.footer ul li a{
+.footer ul li a {
     font-size: 1.8rem;
     color: var(--tex-color);
     font-weight: 500;
     margin-left: 4rem;
-    position: relative; /*para colocar o traço animado em baixo*/
+    position: relative;
+    /*para colocar o traço animado em baixo*/
 }
 
-.footer ul li{
+.footer ul li {
     display: inline-block;
     padding: 0 15px;
 }
 
-.footer .copyright{
+.footer .copyright {
     margin-top: 50px;
     text-align: center;
     font-size: 16px;
@@ -648,71 +687,88 @@ section.Projetos{
 }
 
 
+/*Efeito do Scroll*/
+.efeito-txt-top , .efeito-img-topo,
+.efeito-projetos1, .efeito-projetos2, .efeito-projetos3,
+.efeito-img-sobre, .efeito-txt-sobre, .efeito-btn{
+    visibility: hidden; /*esconder o conteudo antes do efeito*/
+}
+
+
+
 
 
 @media screen and (max-width: 1020px) {
 
-    html{
+    html {
         font-size: 55%;
     }
 
-    .flex{
-        flex-direction: column; /* colocar tudo um de baixo  do outro */
+    .flex {
+        flex-direction: column;
+        /* colocar tudo um de baixo  do outro */
     }
 
-    .topo-do-site .flex{
-        flex-direction: column-reverse; /* para reverter so o texto e a imagem em movimento */
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+        /* para reverter so o texto e a imagem em movimento */
     }
 
-    section.topo-do-site .flex{
+    section.topo-do-site .flex {
         gap: 40px;
     }
 
-    section.topo-do-site{
+    section.topo-do-site {
         padding: 20px 8%;
     }
 
-    .topo-do-site .img-topo-site img{
+    .topo-do-site .img-topo-site img {
         width: 80%;
     }
 
 
-    section.sobre{
+    section.sobre {
         width: auto;
     }
 
-    .sobre .flex{
+    .sobre .flex {
         flex-direction: column;
         text-align: center;
         justify-content: center;
         margin: 0;
     }
 
-    .img-sobre img{
+    .img-sobre img {
         width: 80%;
     }
 
 
-    .txt-topo-site{
+    .txt-topo-site {
         margin-top: 20px;
         flex-direction: column;
         text-align: center;
         justify-content: center;
     }
 
-    .habilidade-educacao{
+    .habilidade-educacao {
         flex-direction: column;
-        
+
     }
 
-    .projetos-container{
+    .projetos-container {
         padding-bottom: 7rem;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         margin: 4rem 5rem;
     }
 
-     /* RODAPÉ */
-    footer .flex{
+    .text-box .descricao-sobre,
+    .text-box .descricao-educacao,
+    .text-box .descricao {
+        padding: 3%;
+    }
+
+    /* RODAPÉ */
+    footer .flex {
         flex-direction: column;
         gap: 30px;
     }
@@ -721,101 +777,136 @@ section.Projetos{
 }
 
 
-@media screen and (max-width: 995px){
-        /*icone de menu*/
-    #menu-icon{
-        display: block;
+@media screen and (max-width: 1000px) {
+    /*icone de menu*/
+
+
+    .header {
+        padding: 2rem 3%;
     }
 
-    .navbar{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid var(--main-color);
-        border-bottom: 3px solid var(--main-color);
-        border-bottom-left-radius: 2em;
-        padding: 1rem 3%;
-        background: #F8F8FD;
-        border-top: 0.1rem solid green;
-        display: none;
+    section {
+        padding: 10rem 3% 2rem;
     }
 
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+}
+
+@media screen and (max-width: 999px) {
+
+
+    /**/
+    .home-content-esquerda {
+        flex-direction: column;
+
     }
 
-    .home{
+    .home-content-esquerda h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content-esquerda h1 {
+        font-size: 5rem;
+    }
+}
+
+
+
+
+@media screen and (max-width: 610px) {
+    
+    .home {
         flex-direction: column;
         margin: 5rem 4rem;
     }
 
-    .home-content-esquerda h3{
+    .home-content-esquerda h3 {
         font-size: 2.6rem;
     }
 
-    .home-content-esquerda h1{
-        font-size: 5rem;
-    }
 
-    .home-content-direita img{
+
+    .home-content-direita img {
         width: 70vw;
         margin-top: 4rem;
     }
 
-    .home-content-esquerda p{
+    .home-content-esquerda p {
         margin-top: 20px;
     }
-    
-    .home-content-esquerda h1{
+
+    .home-content-esquerda h1 {
         font-size: 35px;
     }
-    
-    /*Animaçao do "Desenvolvedor web"*/
-    .home-content-esquerda .tex-animate h3 span{
+
+    .home-content-esquerda .tex-animate h3 span {
         font-size: 2.7rem;
     }
 
-
-
-
-
-
-
-    .habilidade-educacao{
-        flex-direction: column;
-        
+    .content-btn .content {
+        padding: 8px;
     }
 
-         /* RODAPÉ */
-    footer .flex{
+    .info-sobre {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .text-box .descricao-sobre,
+    .text-box .descricao-educacao,
+    .text-box .descricao {
+        padding: 3%;
+    }
+
+
+    .habilidade-educacao {
+        flex-direction: column;
+
+    }
+
+    footer .flex {
         flex-direction: column;
         gap: 30px;
     }
 
-    .footer ul{
+    .footer ul {
         display: none;
     }
 
-    
-    .footer .copyright{
+
+    .footer .copyright {
         margin-top: 10px;
 
+    }
+    .home-content-esquerda .tex-animate h3 span::after {
+        height: 50%;
     }
 
 
 
-    
-    
 }
 
+@media screen and (min-width: 404px) {
+       
+
+    .home-content-esquerda h3 {
+        font-size: 2rem;
+    }
+
+    .home-content-esquerda p {
+
+        padding: 10px;
+    }
+    .home-content-esquerda .tex-animate h3 span::after {
+        height: 100%;
+    }
 
 
 
+}
 
-
-
-
-
+@media screen and (max-width: 362px){
+    .home-content-esquerda .tex-animate h3 span::after {
+        height: 50%;
+    }
+}

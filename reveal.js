@@ -1,5 +1,5 @@
 // Efeito principal
-window.revelar = ScrollReveal({reset:true});
+window.revelar = ScrollReveal({reset:false}); // reset false para acontecer somente uma vez na pagina, caso queria q aconteça td hr entao coloque como "true"
 
 // TODO DO SITE EFEITO
 revelar.reveal('.efeito-txt-top', {
@@ -13,26 +13,36 @@ revelar.reveal('.efeito-img-topo', {
     //distancia para o deslocamento - baixo para cima
     duration: 2000,
     distance: '90px', 
-    delay: 500
+    delay: 500,
 });
 
 // Efeito sobre
 revelar.reveal('.efeito-img-sobre', {
     //duraçao  //2s
     //distancia para o deslocamento - baixo para cima
-    duration: 2000,
+    duration: 1500,
     distance: '90px', 
     delay: 500,
-    origin: 'left'
+    origin: 'left',
 });
 
-revelar.reveal('.efeito-txt-sobre', {
+revelar.reveal('.efeito-titulo-sobre', {
     //duraçao  //2s
     //distancia para o deslocamento - baixo para cima
-    duration: 2000,
+    duration: 1500,
     distance: '90px', 
     delay: 500,
-    origin: 'left'
+    origin: 'left',
+});
+
+
+revelar.reveal('.efeito-bio-sobre', {
+    //duraçao  //2s
+    //distancia para o deslocamento - baixo para cima
+    duration: 1500,
+    distance: '90px', 
+    delay: 500,
+    origin: 'left',
 });
 
 
@@ -45,7 +55,7 @@ revelar.reveal('.efeito-projetos1', {
     //distancia para o deslocamento - baixo para cima
     duration: 2000,
     distance: '90px', 
-    delay: 500
+    delay: 500,
 });
 
 revelar.reveal('.efeito-projetos2', {
@@ -54,6 +64,7 @@ revelar.reveal('.efeito-projetos2', {
     duration: 2000,
     distance: '90px', 
     delay: 1000
+
 });
 
 revelar.reveal('.efeito-projetos3', {
@@ -61,7 +72,8 @@ revelar.reveal('.efeito-projetos3', {
     //distancia para o deslocamento - baixo para cima
     duration: 2000,
     distance: '90px', 
-    delay: 1500
+    delay: 1500,
+ 
 });
 
 
@@ -70,7 +82,8 @@ revelar.reveal('.efeito-btn', {
     //distancia para o deslocamento - baixo para cima
     duration: 2000,
     distance: '90px', 
-    delay: 2000
+    delay: 1800,
+
 });
 
 

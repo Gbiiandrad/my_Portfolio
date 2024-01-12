@@ -237,7 +237,7 @@ section.topo-do-site .flex {
 
     0%,
     100% {
-        content: "Web Develope.";
+        content: "Desenvolvedora Web.";
     }
 
 }
@@ -690,12 +690,15 @@ section.Projetos {
 /*Efeito do Scroll*/
 .efeito-txt-top , .efeito-img-topo,
 .efeito-projetos1, .efeito-projetos2, .efeito-projetos3,
-.efeito-img-sobre, .efeito-txt-sobre, .efeito-btn{
+.efeito-img-sobre, .efeito-txt-sobre, .efeito-btn, .efeito-titulo-sobre{
     visibility: hidden; /*esconder o conteudo antes do efeito*/
 }
 
 
-
+.animated-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 @media screen and (max-width: 1020px) {

@@ -895,25 +895,30 @@ section.Projetos {
         font-size: 5rem;
     }
 
+        /*Cancelar  Animaçao do "Desenvolvedor web"*/
+    .home-content-esquerda .tex-animate h3 span {
+        position: relative;
+        font-size: 2.7rem;
+        color: #8441d0; /* Defina a cor desejada aqui */
 
+    }
 
-      /*Cancelar  Animaçao do "Desenvolvedor web"*/
-.home-content-esquerda .tex-animate h3 span {
-    position: relative;
-    font-size: 2.7rem;
-}
+    .home-content-esquerda .tex-animate h3 span::before {
+        content: " Desenvolvedora Web.";
+        
 
-.home-content-esquerda .tex-animate h3 span::before {
-    content: " Desenvolvedora Web.";
-    
+    }
 
-}
+    .home-content-esquerda .tex-animate h3 span::after {
+        position: relative;
+        animation: none;
+    }
 
-.home-content-esquerda .tex-animate h3 span::after {
-    position: relative;
-    animation: none;
-}
-
+    .social-midia a:active,
+    .footer .social-footer a:active {
+        transition: 0.3s ease;
+        transform: scale(1.5); /* Altere o valor conforme necessário */
+    }
 
 
 
@@ -989,13 +994,6 @@ section.Projetos {
         margin-top: 10px;
 
     }
-    .home-content-esquerda .tex-animate h3 span::after {
-        height: 50%;
-    }
-
-
-
-
 }
 
 @media screen and (min-width: 404px) {
@@ -1009,16 +1007,6 @@ section.Projetos {
 
         padding: 10px;
     }
-    .home-content-esquerda .tex-animate h3 span::after {
-        height: 100%;
-    }
-
-
 
 }
 
-@media screen and (max-width: 362px){
-    .home-content-esquerda .tex-animate h3 span::after {
-        height: 50%;
-    }
-}

@@ -830,14 +830,24 @@ section.Projetos {
     .home-content-esquerda .tex-animate h3 span {
         position: relative;
         font-size: 2.7rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        background: var(--main-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        /*Defina a cor do texto para transparente*/
+        color: transparent;
+
+        
     }
     hr{
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        background: rgba(238, 174, 202, 1);
     }
 
     .sub-titulo-escola{
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        background:rgba(238, 174, 202, 1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        /*Defina a cor do texto para transparente*/
+        color: transparent;
     }
 
     .home-content-esquerda .tex-animate h3 span::before {

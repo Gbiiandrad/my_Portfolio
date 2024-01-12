@@ -31,8 +31,8 @@ revelar.reveal('.efeito-txt-sobre', {
     //distancia para o deslocamento - baixo para cima
     duration: 2000,
     distance: '90px', 
-    delay: 1000,
-    origin: 'right'
+    delay: 500,
+    origin: 'left'
 });
 
 

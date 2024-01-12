@@ -1007,6 +1007,21 @@ section.Projetos {
 
         padding: 10px;
     }
-
+    
+    
 }
+
+@media screen and (max-width: 438px) {
+    .header {
+        display: block;
+
+    }
+    .navbar a {
+        font-size: 1.7rem;
+    }
+       
+}
+
+
+
 

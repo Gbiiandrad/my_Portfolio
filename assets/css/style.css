@@ -190,7 +190,7 @@ section.topo-do-site .flex {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.24);
+    
     
 
     
@@ -460,7 +460,6 @@ section.sobre .flex {
     background-clip: text;
     /*Defina a cor do texto para transparente*/
     color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.24);
 
 }
 
@@ -496,7 +495,7 @@ hr {
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 6%, rgba(148, 187, 233, 1) 100%);
     border: none;
     display: block;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.24);
+
 }
 
 
@@ -830,9 +829,15 @@ section.Projetos {
         /*Cancelar  Animaçao do "Desenvolvedor web"*/
     .home-content-esquerda .tex-animate h3 span {
         position: relative;
-        font-size: 2.7rem
-        
+        font-size: 2.7rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    hr{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
 
+    .sub-titulo-escola{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .home-content-esquerda .tex-animate h3 span::before {

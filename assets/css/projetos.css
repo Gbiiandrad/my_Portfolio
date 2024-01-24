@@ -382,7 +382,8 @@ section{
 @media screen and (max-width: 391px) {
     
     .header {
-        display: block;
+        align-items: center;
+        justify-content: center;
 
     }
     .navbar a {

@@ -126,6 +126,11 @@ html {
 
 
 /*icone de menu*/
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--tex-color);
+    display: none;
+}
 
 .mobile-menu {
     cursor: pointer;
@@ -796,12 +801,12 @@ section.Projetos {
 
 
 @media screen and (max-width: 1000px) {
-    /*icone de menu*/
-
-
+    /*
     .header {
         padding: 2rem 3%;
-    }
+    }*/
+
+
 
     section {
         padding: 10rem 3% 2rem;
@@ -877,6 +882,8 @@ section.Projetos {
 
 @media screen and (max-width: 610px) {
     
+   
+
     .home {
         flex-direction: column;
         margin: 5rem 4rem;
@@ -941,6 +948,14 @@ section.Projetos {
         margin-top: 10px;
 
     }
+
+    .header {
+        display: block;
+
+    }
+    .navbar a {
+        font-size: 1.4rem;
+    }
 }
 
 @media screen and (min-width: 404px) {
@@ -954,6 +969,8 @@ section.Projetos {
 
         padding: 10px;
     }
+
+    
     
     
 }

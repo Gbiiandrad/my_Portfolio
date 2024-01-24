@@ -380,6 +380,10 @@ section{
 
     }
 
+    .header{
+        position: fixed;
+    }
+
 
 
 

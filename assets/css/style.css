@@ -880,6 +880,10 @@ section.Projetos {
         transform: scale(1.5); /* Altere o valor conforme necessário */
     }
 
+    .header{
+        position: fixed;
+    }
+
 
 
 }

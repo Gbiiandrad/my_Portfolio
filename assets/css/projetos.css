@@ -300,6 +300,13 @@ section{
     opacity: 0.8;
 }
 
+.link-whatsaap img{
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
 
 
 @media screen and (max-width: 1020px) {

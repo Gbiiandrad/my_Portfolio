@@ -13,7 +13,7 @@
 :root {
     --main-color: #9932CC;
     --bg-fundo: #220B3B;
-    
+    --clr: #222327;
     
     --tex-color: #F8F8FD;
     --hover-box-shadow: rgba(0, 0, 0, 0.19)0px 10px 20px, rgba(0, 0, 0, 0.23)0px 6px 6px;
@@ -35,6 +35,7 @@
 body {
     background-color: var(--bg-fundo);
     height: 100vh;
+    min-height: 100%;
     color: var(--tex-color);
 }
 
@@ -124,13 +125,6 @@ html {
 }
 
 
-
-/*icone de menu*/
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--tex-color);
-    display: none;
-}
 
 .mobile-menu {
     cursor: pointer;
@@ -731,6 +725,94 @@ section.Projetos {
 }
 
 
+.navgtion-mobile{
+    width: 100%;
+    height: 70px;
+    background: var(--main-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px ;
+}
+
+.navgtion-mobile ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.navgtion-mobile ul li{
+    list-style: none;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    
+}
+
+.navgtion-mobile ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: var(--tex-color);
+    text-decoration: none;
+}
+
+
+.navgtion-mobile ul li a .icon-mobile{
+    position: relative;
+    display: block;
+    /*line-height: 75px;*/
+    font-size: 1.6em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--tex-color); /*cor icones*/
+    margin-top: 20px;
+}
+
+.navgtion-mobile ul li.active a .icon-mobile{
+    color: var(--bg-fundo);
+    transition: 0.3s ease;
+
+}
+
+.navgtion-mobile ul li a .text-mobile{
+    color: var(--tex-color);
+    font-weight: 400;
+    font-size: 1.1em;
+
+}
+
+.navgtion-mobile ul li.active a .text-mobile{
+    color: var(--bg-fundo);
+    transition: 0.3s ease;
+}
+
+
+
+
+.navgtion-mobile ul li:nth-child(1).active {
+    transform: scale(1.3);
+}
+.navgtion-mobile ul li:nth-child(2).active{
+    transform: scale(1.3);
+}
+
+.navgtion-mobile ul li:nth-child(3).active {
+    transform: scale(1.3);
+}
+.navgtion-mobile ul li:nth-child(4).active {
+    transform: scale(1.3);
+}
+
+
+
+
 @media screen and (max-width: 1020px) {
 
     html {
@@ -881,9 +963,24 @@ section.Projetos {
     }
 
     .header{
-        position: fixed;
+        display: none;
+     }
+ 
+     .navgtion-mobile{
+         display: flex;
+         position: fixed;
+         bottom: 0;
+         min-width: 100%;
+         z-index: 100;
+     }
+
+     .link-whatsaap img{
+        /*bottom: 90px;*/
+        display: none;
     }
 
+
+    
 
 
 }
@@ -960,13 +1057,22 @@ section.Projetos {
         margin-top: 10px;
 
     }
+    
+    .header{
+        display: none;
+     }
+ 
+     .navgtion-mobile{
+         display: flex;
+         position: fixed;
+         bottom: 0;
+         min-width: 100%;
+         z-index: 100;
+     }
 
-    .header {
-        display: block;
-
-    }
-    .navbar a {
-        font-size: 1.4rem;
+     .link-whatsaap img{
+        /*bottom: 90px;*/
+        display: none;
     }
 }
 

@@ -13,7 +13,6 @@
 :root {
     --main-color: #9932CC;
     --bg-fundo: #220B3B;
-    --clr: #222327;
     
     --tex-color: #F8F8FD;
     --hover-box-shadow: rgba(0, 0, 0, 0.19)0px 10px 20px, rgba(0, 0, 0, 0.23)0px 6px 6px;
@@ -776,8 +775,13 @@ section.Projetos {
 }
 
 .navgtion-mobile ul li.active a .icon-mobile{
-    color: var(--bg-fundo);
+
     transition: 0.3s ease;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 6%, rgba(148, 187, 233, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /*Defina a cor do texto para transparente*/
+    color: transparent;
 
 }
 

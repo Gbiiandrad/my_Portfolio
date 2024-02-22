@@ -775,13 +775,9 @@ section.Projetos {
 }
 
 .navgtion-mobile ul li.active a .icon-mobile{
-
+    color: var(--bg-fundo);
     transition: 0.3s ease;
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 6%, rgba(148, 187, 233, 1) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    /*Defina a cor do texto para transparente*/
-    color: transparent;
+   
 
 }
 
